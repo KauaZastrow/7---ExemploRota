@@ -1,7 +1,7 @@
 import express from "express" ;
 import { cadastrarProduto,
     listarProdutos,
-    BuscarProdutoPorId,
+    buscarProdutoPorId,
     atualizarProduto,
     deletarProduto
  } from "../controller/produtoController.js";
@@ -9,7 +9,7 @@ import { cadastrarProduto,
  const router = express.Router();
  router.post("/", cadastrarProduto);
  router.get("/", listarProdutos);
- router.get("/:id", BuscarProdutoPorId);
+ router.get("/:id", buscarProdutoPorId);
  router.patch("/:id", atualizarProduto);
  router.delete("/:id", deletarProduto);
 

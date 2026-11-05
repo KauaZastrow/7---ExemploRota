@@ -1,7 +1,7 @@
 import express from "express" ;
 import { cadastrarCategoria,
     listarCategorias,
-    buscarCategoriaPorIndice,
+    buscarCategoriaPorId,
     atualizarCategoria,
     deletarCategoria
  } from "../controller/categoriaController.js";
@@ -9,8 +9,8 @@ import { cadastrarCategoria,
  const router = express.Router();
  router.post("/", cadastrarCategoria);
  router.get("/", listarCategorias);
- router.get("/:indice", buscarCategoriaPorIndice);
- router.patch("/:indice", atualizarCategoria);
- router.delete("/:indice", deletarCategoria);
+ router.get("/:id", buscarCategoriaPorId);
+ router.patch("/:id", atualizarCategoria);
+ router.delete("/:id", deletarCategoria);
 
  export default router;

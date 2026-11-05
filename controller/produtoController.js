@@ -36,7 +36,7 @@ export async function listarProdutos(req, res) {
     }}
 
 
-    export async function BuscarProdutoPorId(req, res) {
+    export async function buscarProdutoPorId(req, res) {
         try {
             const id = Number(req.params.id);
 

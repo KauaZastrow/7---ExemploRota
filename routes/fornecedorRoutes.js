@@ -1,7 +1,7 @@
 import express from "express" ;
 import { cadastrarFornecedor,
     listarFornecedores,
-    buscarFornecedorPorIndice,
+    buscarFornecedorPorId,
     atualizarFornecedor,
     deletarFornecedor
  } from "../controller/fornecedorController.js";
@@ -9,8 +9,8 @@ import { cadastrarFornecedor,
  const router = express.Router();
  router.post("/", cadastrarFornecedor);
  router.get("/", listarFornecedores);
- router.get("/:indice", buscarFornecedorPorIndice);
- router.patch("/:indice", atualizarFornecedor);
- router.delete("/:indice", deletarFornecedor);
+ router.get("/:id", buscarFornecedorPorId);
+ router.patch("/:id", atualizarFornecedor);
+ router.delete("/:id", deletarFornecedor);
 
  export default router;
